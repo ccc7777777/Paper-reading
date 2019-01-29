@@ -1,0 +1,15 @@
+Safe Grid Search with Optimal Complexity
+
+We revisit the techniques of approximating the regularization path up to predefined tolerance eps in a unified framework and show that its complexity is 
+O(1/^d\sqrt(eps)) for uniformly convex loss of order d > 0 and O(1/sqrt(eps)) for Generalized Self-Concordant functions.
+
+如何选取loss function中合适的正则系数lambda？
+cross-validation, see Arlot and Celisse (2010): 
+splitting the data in two parts: on the first part (training set) the method is trained for a pre-defined collection of candidates 
+ΛT := {λ0, . . . , λT−1}, and on the second part (validation set), the best parameter is selected.
+
+For a piecewise quadratic loss f and a piecewise linear regularization Ω (e.g., the Lasso estimator), 
+(Osborne et al., 2000; Rosset and Zhu, 2007) have shown that the set of solutions follows a piecewise 
+linear curve w.r.t. to the parameter λ.
+
+generate the full path by maintaining optimality conditions when the regularization param- eter varies: LARS
